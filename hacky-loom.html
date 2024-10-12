@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacky loom! 🙌 ✨</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .video-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      /* Hide anything outside the container */
+      position: relative;
+      /* Required for absolute positioning of the video */
+    }
+
+    #videoElement {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1) scaleX(-1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-container">
+    <video autoplay id="videoElement"></video>
+  </div>
+
+  <script>
+    const video = document.querySelector("#videoElement");
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        console.error("Error accessing webcam:", err);
+      });
+  </script>
+</body>
+</html>
