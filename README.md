@@ -16,9 +16,21 @@ Hacky & lightweight version of [Loom](http://loom.com). 100% free and open sourc
 ## How to use
 
 1. Start hacky-loom like any other desktop app.
-2. Position the hacky-loom window one of the corners of your screen, and position rest of your windows as your recording use-case requires.
+2. Position the hacky-loom window on one of the corners of your screen, and position rest of your windows as your recording use-case requires.
 3. Record your screen using your OS's built-in screen recording tool.
 4. Share the recordings with others however you'd like.
+
+### Want event smaller window?
+
+The chrome app installed through shortcuts does not allow making window smaller beyond certain size.
+You can make window even smaller by starting chrome in `--app` mode instead with following command:
+```sh
+
+# <path_to_local_chrome> --app=https://JayNakrani.com/hacky-loom
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --app=https://JayNakrani.com/hacky-loom
+```
 
 ## Why not use built-in Photo-Booth app?
 
