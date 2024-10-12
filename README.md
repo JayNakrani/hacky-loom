@@ -11,7 +11,7 @@ Hacky & lightweight version of [Loom](http://loom.com). 100% free and open sourc
 1. Visit [JayNakrani.com/hacky-loom.html](https://JayNakrani.com/hacky-loom.html) in chrome.
 2. Click three dots on the top right corner, then click "Cast, Save, and Share", then click "Create Shortcut". See the screenshot below.
 
-![Screenshot showing how to install](how-to-install.png)
+<img src="how-to-install.png" alt="Screenshot showing how to install" width="400"/>
 
 ## How to use
 
