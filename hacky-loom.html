@@ -6,38 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hacky loom! 🙌 ✨</title>
   <style>
-    body,
-    html {
+    * {
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      box-sizing: border-box;
     }
 
-    .video-container {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      /* Hide anything outside the container */
-      position: relative;
-      /* Required for absolute positioning of the video */
+    body,
+    html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
     }
 
-    #videoElement {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1) scaleX(-1);
+    .container {
+      text-align: center;
+    }
+
+    video {
+      display: block;
+      margin: 0 auto;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #pipNotification {
+      position: fixed;
+      background-color: #d1ecf1;
+      /* Light blue background */
+      color: #0c5460;
+      /* Dark blue text */
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: 1px solid #bee5eb;
+      /* Slightly darker border */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      z-index: 1000;
+      display: none;
+      /* Must match video element width */
+      max-width: 640px;
     }
   </style>
 </head>
 
 <body>
-  <div class="video-container">
-    <video autoplay id="videoElement"></video>
+  <div class="container">
+    <div id="pipNotification">
+      Playing in Picture-in-Picture Mode! Position the window to one of the corners, and start screen recording using
+      the built-in screen recorder of your operating system!
+    </div>
+    <video autoplay id="videoElement" width="640"></video>
+    <button id="pipButton">Start / Stop</button>
   </div>
 
   <script>
-    const video = document.querySelector("#videoElement");
+    const video = document.getElementById("videoElement");
+    const pipButton = document.getElementById("pipButton");
+    const pipNotification = document.getElementById('pipNotification');
 
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(stream => {
@@ -45,7 +87,33 @@
       })
       .catch(err => {
         console.error("Error accessing webcam:", err);
+        alert("Error accessing webcam:", err);
       });
+
+    pipButton.addEventListener('click', async () => {
+      // Check if PiP is supported
+      if (!('requestPictureInPicture' in video)) {
+        alert('Picture-in-Picture is not supported in this browser.');
+        return;
+      }
+
+      if (document.pictureInPictureElement === video) {
+        await document.exitPictureInPicture();
+      } else {
+        await video.requestPictureInPicture();
+      }
+    });
+
+    video.addEventListener('enterpictureinpicture', () => {
+      console.log('Entered Picture-in-Picture mode');
+      pipNotification.style.display = 'block';
+    });
+
+    video.addEventListener('leavepictureinpicture', () => {
+      console.log('Left Picture-in-Picture mode');
+      pipNotification.style.display = 'none';
+    });
   </script>
 </body>
+
 </html>

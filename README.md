@@ -1,40 +1,23 @@
 # Hacky Loom
 
-Hacky & lightweight version of [Loom](http://loom.com). 100% free and open source.
+Hacky & lightweight version of [Loom](http://loom.com). 100% free and open source. No installation required!
 
-## Demo
+<!-- TODO: Add update demo! -->
+<!-- ## Demo -->
 
-[![quick demo](https://img.youtube.com/vi/io0wzMC6rWU/0.jpg)](https://www.youtube.com/watch?v=io0wzMC6rWU)
-
-## Install
-
-1. Visit [JayNakrani.com/hacky-loom.html](https://JayNakrani.com/hacky-loom.html) in chrome.
-2. Click three dots on the top right corner, then click "Cast, Save, and Share", then click "Create Shortcut". See the screenshot below.
-
-<img src="how-to-install.png" alt="Screenshot showing how to install" width="400"/>
+<!-- [![quick demo](https://img.youtube.com/vi/io0wzMC6rWU/0.jpg)](https://www.youtube.com/watch?v=io0wzMC6rWU) -->
 
 ## How to use
 
-1. Start hacky-loom like any other desktop app.
-2. Position the hacky-loom window on one of the corners of your screen, and position rest of your windows as your recording use-case requires.
-3. Record your screen using your OS's built-in screen recording tool.
-4. Share the recordings with others however you'd like.
+1. Visit [JayNakrani.com/hacky-loom](https://JayNakrani.com/hacky-loom)
+1. Give camera permission, and then click "Start / Stop" button to start the Picture-in-Picture (PiP) mode.
+1. Position the newly created PiP window wherever you want.
+1. Record your screen using your OS's built-in screen recording tool.
+1. Share the recordings with others however you'd like.
+1. When you're done, either close the window or click "Start / Stop" button to stop the PiP mode.
 
-### Want event smaller window?
+## How does it work?
 
-The chrome app installed through shortcuts does not allow making window smaller beyond certain size.
-You can make window even smaller by starting chrome in `--app` mode instead with following command:
-```sh
-
-# <path_to_local_chrome> --app=https://JayNakrani.com/hacky-loom
-
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
-  --app=https://JayNakrani.com/hacky-loom
-```
-
-## Why not use built-in Photo-Booth app?
-
-Photo-Booth app is great but, it has a few limitations which make it less than ideal for loom-style screen recordings.
-
-1. It doesn't allow resizing the window below a certain size, so you're stuck with a large window.
-2. It pauses the camera feed if the focus is away from it for a while. This makes it annoying as you have to keep moving the focus back to the Photo-Booth window.
+It uses the [Picture-in-Picture (PiP)](https://developer.chrome.com/blog/watch-video-using-picture-in-picture) mode
+of Chrome to create a floating window that you can move around and resize. The actual screen recording can be done by
+the screen recorder of your choice (including the built-in screen recorder of your OS).
