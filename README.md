@@ -2,10 +2,9 @@
 
 Hacky & lightweight version of [Loom](http://loom.com). 100% free and open source. No installation required!
 
-<!-- TODO: Add update demo! -->
-<!-- ## Demo -->
+## Demo
 
-<!-- [![quick demo](https://img.youtube.com/vi/io0wzMC6rWU/0.jpg)](https://www.youtube.com/watch?v=io0wzMC6rWU) -->
+[![quick demo](https://img.youtube.com/vi/nZNEOm0W8s0/maxresdefault.jpg)](https://www.youtube.com/watch?v=nZNEOm0W8s0)
 
 ## How to use
 
