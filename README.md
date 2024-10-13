@@ -2,6 +2,11 @@
 
 Hacky & lightweight version of [Loom](http://loom.com). 100% free and open source. No installation required!
 
+
+<a href="https://www.producthunt.com/posts/hacky-loom?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hacky&#0045;loom" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=499497&theme=light" alt="Hacky&#0032;Loom - Lightweight&#0032;Loom&#0032;alternative&#0032;to&#0032;show&#0032;your&#0032;face&#0032;on&#0032;videos | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
+
+
 ## Demo
 
 [![quick demo](https://img.youtube.com/vi/nZNEOm0W8s0/maxresdefault.jpg)](https://www.youtube.com/watch?v=nZNEOm0W8s0)
