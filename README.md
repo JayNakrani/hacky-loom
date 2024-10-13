@@ -5,6 +5,7 @@ Hacky & lightweight version of [Loom](http://loom.com). 100% free and open sourc
 
 <a href="https://www.producthunt.com/posts/hacky-loom?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hacky&#0045;loom" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=499497&theme=light" alt="Hacky&#0032;Loom - Lightweight&#0032;Loom&#0032;alternative&#0032;to&#0032;show&#0032;your&#0032;face&#0032;on&#0032;videos | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
+<a href="https://www.producthunt.com/products/hacky-loom/reviews?utm_source=badge-product_review&utm_medium=badge&utm_souce=badge-hacky&#0045;loom" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=615715&theme=light" alt="Hacky&#0032;Loom - Lightweight&#0032;loom&#0046;com&#0032;alternative&#0046;&#0032;100&#0037;&#0032;free&#0032;and&#0032;open&#0032;source | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 
 ## Demo
